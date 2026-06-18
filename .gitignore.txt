@@ -1,0 +1,5 @@
+.quarto/
+.venv/
+.Rhistory
+.ipynb_checkpoints/
+_site/
