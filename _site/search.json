@@ -1,0 +1,289 @@
+[
+  {
+    "objectID": "index.html#hello-there",
+    "href": "index.html#hello-there",
+    "title": "Quarto Presentations",
+    "section": "Hello, There",
+    "text": "Hello, There\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nActivating scroll view\n\n…and much more"
+  },
+  {
+    "objectID": "index.html#r-avidya-dukkha-dataframe",
+    "href": "index.html#r-avidya-dukkha-dataframe",
+    "title": "Quarto Presentations",
+    "section": "R Avidya-Dukkha dataframe",
+    "text": "R Avidya-Dukkha dataframe\n\n\n\n\n\n\n\n\n\n\ngender\nage\nstatus\nnegativism\nsomatization\nshyness\npsychopathology\nextraversion\nanxiety\navidya\n\n\n\n\nMale\n29\nNot Married\n0.68\n0.78\n-0.70\n1.69\n2.00\n1.89\nhigh\n\n\nFemale\n40\nMarried\n0.98\n-0.02\n0.84\n0.94\n1.06\n1.95\nhigh\n\n\nMale\n46\nMarried\n0.39\n0.19\n0.92\n0.58\n0.18\n1.30\nmid\n\n\nMale\n50\nMarried\n0.39\n0.59\n0.04\n0.38\n-1.75\n0.25\nhigh\n\n\nFemale\n30\nNot Married\n-1.56\n-1.25\n-0.43\n0.15\n-0.02\n-0.35\nlow\n\n\nFemale\n35\nMarried\n-0.71\n-0.59\n-1.47\n0.58\n0.18\n-0.35\nmid\n\n\nFemale\n28\nNot Married\n-0.57\n-0.13\n1.21\n-0.41\n0.61\n0.94\nhigh\n\n\nMale\n52\nWidow\n-0.71\n0.39\n1.21\n-0.41\n-1.47\n0.50\nlow\n\n\nFemale\n20\nNot Married\n1.28\n0.08\n1.35\n-0.10\n-1.88\n0.25\nhigh\n\n\nFemale\n45\nMarried\n1.28\n1.76\n1.48\n1.55\n0.61\n0.25\nhigh"
+  },
+  {
+    "objectID": "index.html#pretty-code",
+    "href": "index.html#pretty-code",
+    "title": "Quarto Presentations",
+    "section": "Pretty Code",
+    "text": "Pretty Code\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport random\n\ndef pick_teams(players: list) -&gt; dict:\n    pass\n\nnames = [\"Alice\", \"Bob\", \"Carol\", \"Dave\"]\nteams = pick_teams(names)\n\nLearn more: Syntax Highlighting"
+  },
+  {
+    "objectID": "index.html#code-animations",
+    "href": "index.html#code-animations",
+    "title": "Quarto Presentations",
+    "section": "Code Animations",
+    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport random\n\ndef pick_teams(players: list) -&gt; dict:\n    random.shuffle(players)  # Shuffle the list randomly once\n    mid = len(players) // 2\n    team_a = players[:mid]\n    team_b = players[mid:]\n    return {\"Team A\": team_a, \"Team B\": team_b}\n\nnames = [\"Alice\", \"Bob\", \"Carol\", \"Dave\"]\nteams = pick_teams(names)\nprint(teams)\n\nLearn more: Code Animations"
+  },
+  {
+    "objectID": "index.html#line-highlighting",
+    "href": "index.html#line-highlighting",
+    "title": "Quarto Presentations",
+    "section": "Line Highlighting",
+    "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+  },
+  {
+    "objectID": "index.html#data-visualization-section",
+    "href": "index.html#data-visualization-section",
+    "title": "Quarto Presentations",
+    "section": "Data Visualization Section",
+    "text": "Data Visualization Section\nThe following slides showcase various Python visualization libraries and techniques"
+  },
+  {
+    "objectID": "index.html#basic-matplotlib-example",
+    "href": "index.html#basic-matplotlib-example",
+    "title": "Quarto Presentations",
+    "section": "Basic Matplotlib Example",
+    "text": "Basic Matplotlib Example\n\n\nCode\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load the dataset\ntips = sns.load_dataset(\"tips\")\n\n# Create the scatter plot\nsns.scatterplot(data=tips, x=\"total_bill\", y=\"tip\", hue=\"time\")\nplt.title(\"Tips vs Total Bill\")\nplt.show()"
+  },
+  {
+    "objectID": "index.html#basic-matplotlib-example-output",
+    "href": "index.html#basic-matplotlib-example-output",
+    "title": "Quarto Presentations",
+    "section": "Basic Matplotlib Example",
+    "text": "Basic Matplotlib Example"
+  },
+  {
+    "objectID": "index.html#interactive-plotting-with-plotly",
+    "href": "index.html#interactive-plotting-with-plotly",
+    "title": "Quarto Presentations",
+    "section": "Interactive Plotting with Plotly",
+    "text": "Interactive Plotting with Plotly\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\n# Load the dataset\ndf = px.data.gapminder().query(\"year == 2007\")\n\n# Create an interactive scatter plot\nfig = px.scatter(df, x=\"gdpPercap\", y=\"lifeExp\", \n                 size=\"pop\", color=\"continent\",\n                 hover_name=\"country\", log_x=True,\n                 size_max=60)\nfig"
+  },
+  {
+    "objectID": "index.html#advanced-matplotlib-visualization",
+    "href": "index.html#advanced-matplotlib-visualization",
+    "title": "Quarto Presentations",
+    "section": "Advanced Matplotlib Visualization",
+    "text": "Advanced Matplotlib Visualization\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Generate data\nx = np.linspace(0, 10, 100)\ny1 = np.sin(x)\ny2 = np.cos(x)\n\nplt.style.use('seaborn-v0_8')\nfig, ax = plt.subplots(figsize=(10, 6))\n\nax.plot(x, y1, label='Sin(x)', color='blue', linewidth=2)\nax.plot(x, y2, label='Cos(x)', color='red', linewidth=2)\nax.fill_between(x, y1, y2, alpha=0.2)\n\nax.set_title('Trigonometric Functions')\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.legend()\nax.grid(True)\n\nplt.show()"
+  },
+  {
+    "objectID": "index.html#seaborn-advanced-visualization",
+    "href": "index.html#seaborn-advanced-visualization",
+    "title": "Quarto Presentations",
+    "section": "Seaborn Advanced Visualization",
+    "text": "Seaborn Advanced Visualization\n\n\nCode\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nplt.style.use('seaborn-v0_8')\n\npenguins = sns.load_dataset(\"penguins\")\n\n# Create a figure with subplots\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))\n\n# Plot 1: Violin plot\nsns.violinplot(data=penguins, x=\"species\", y=\"body_mass_g\", ax=ax1)\nax1.set_title(\"Body Mass Distribution by Species\")\n\n# Plot 2: Box plot\nsns.boxplot(data=penguins, x=\"species\", y=\"flipper_length_mm\", ax=ax2)\nax2.set_title(\"Flipper Length Distribution by Species\")\n\nplt.tight_layout()\nplt.show()"
+  },
+  {
+    "objectID": "index.html#seaborn-advanced-visualization-output",
+    "href": "index.html#seaborn-advanced-visualization-output",
+    "title": "Quarto Presentations",
+    "section": "Seaborn Advanced Visualization",
+    "text": "Seaborn Advanced Visualization"
+  },
+  {
+    "objectID": "index.html#data-management-section",
+    "href": "index.html#data-management-section",
+    "title": "Quarto Presentations",
+    "section": "Data Management Section",
+    "text": "Data Management Section\nThe following slides demonstrate data handling and presentation"
+  },
+  {
+    "objectID": "index.html#tables-example-simple-dataframe",
+    "href": "index.html#tables-example-simple-dataframe",
+    "title": "Quarto Presentations",
+    "section": "Tables Example (Simple DataFrame)",
+    "text": "Tables Example (Simple DataFrame)\n\n\n   A  B   C\nw  1  5   9\nx  2  6  10\ny  3  7  11\nz  4  8  12"
+  },
+  {
+    "objectID": "index.html#tables-example-great-tables",
+    "href": "index.html#tables-example-great-tables",
+    "title": "Quarto Presentations",
+    "section": "Tables Example (Great Tables)",
+    "text": "Tables Example (Great Tables)\n\n\nCode\nfrom great_tables import GT, html\nfrom great_tables.data import sza\nimport polars as pl\nimport polars.selectors as cs\n\nsza_pivot = (\n    pl.from_pandas(sza)\n    .filter((pl.col(\"latitude\") == \"20\") & (pl.col(\"tst\") &lt;= \"1200\"))\n    .select(pl.col(\"*\").exclude(\"latitude\"))\n    .drop_nulls()\n    .pivot(values=\"sza\", index=\"month\", on=\"tst\", sort_columns=True)\n)\n\ntable = (\n    GT(sza_pivot, rowname_col=\"month\")\n    .data_color(\n        domain=[90, 0],\n        palette=[\"rebeccapurple\", \"white\", \"orange\"],\n        na_color=\"white\",\n    )\n    .tab_header(\n        title=\"Solar Zenith Angles from 05:30 to 12:00\",\n        subtitle=html(\"Average monthly values at latitude of 20&deg;N.\"),\n    )\n    .sub_missing(missing_text=\"\")\n)\n\ntable"
+  },
+  {
+    "objectID": "index.html#tables-example-great-tables-output",
+    "href": "index.html#tables-example-great-tables-output",
+    "title": "Quarto Presentations",
+    "section": "Tables Example (Great Tables)",
+    "text": "Tables Example (Great Tables)\n\n\n\n\n\n\n\nSolar Zenith Angles from 05:30 to 12:00\n\n\nAverage monthly values at latitude of 20°N.\n\n\n\n0530\n0600\n0630\n0700\n0730\n0800\n0830\n0900\n0930\n1000\n1030\n1100\n1130\n1200\n\n\n\n\njan\n\n\n\n84.9\n78.7\n72.7\n66.1\n61.5\n56.5\n52.1\n48.3\n45.5\n43.6\n43.0\n\n\nfeb\n\n\n88.9\n82.5\n75.8\n69.6\n63.3\n57.7\n52.2\n47.4\n43.1\n40.0\n37.8\n37.2\n\n\nmar\n\n\n85.7\n78.8\n72.0\n65.2\n58.6\n52.3\n46.2\n40.5\n35.5\n31.4\n28.6\n27.7\n\n\napr\n\n88.5\n81.5\n74.4\n67.4\n60.3\n53.4\n46.5\n39.7\n33.2\n26.9\n21.3\n17.2\n15.5\n\n\nmay\n\n85.0\n78.2\n71.2\n64.3\n57.2\n50.2\n43.2\n36.1\n29.1\n26.1\n15.2\n8.8\n5.0\n\n\njun\n89.2\n82.7\n76.0\n69.3\n62.5\n55.7\n48.8\n41.9\n35.0\n28.1\n21.1\n14.2\n7.3\n2.0\n\n\njul\n88.8\n82.3\n75.7\n69.1\n62.3\n55.5\n48.7\n41.8\n35.0\n28.1\n21.2\n14.3\n7.7\n3.1\n\n\naug\n\n83.8\n77.1\n70.2\n63.3\n56.4\n49.4\n42.4\n35.4\n28.3\n21.3\n14.3\n7.3\n1.9\n\n\nsep\n\n87.2\n80.2\n73.2\n66.1\n59.1\n52.1\n45.1\n38.1\n31.3\n24.7\n18.6\n13.7\n11.6\n\n\noct\n\n\n84.1\n77.1\n70.2\n63.3\n56.5\n49.9\n43.5\n37.5\n32.0\n27.4\n24.3\n23.1\n\n\nnov\n\n\n87.8\n81.3\n74.5\n68.3\n61.8\n56.0\n50.2\n45.3\n40.7\n37.4\n35.1\n34.4\n\n\ndec\n\n\n\n84.3\n78.0\n71.8\n66.1\n60.5\n55.6\n50.9\n47.2\n44.2\n42.4\n41.8"
+  },
+  {
+    "objectID": "index.html#column-layout-with-data",
+    "href": "index.html#column-layout-with-data",
+    "title": "Quarto Presentations",
+    "section": "Column Layout with Data",
+    "text": "Column Layout with Data\nArrange content into columns of varying widths:\n\n\nPenguins Dataset Analysis\nThe Palmer Penguins dataset contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica.\n\n\n\nspecies     island  bill_length_mm  ...  flipper_length_mm  body_mass_g     sex\n0 Adelie Torgersen 39.1 … 181.0 3750.0 Male 1 Adelie Torgersen 39.5 … 186.0 3800.0 Female 2 Adelie Torgersen 40.3 … 195.0 3250.0 Female 3 Adelie Torgersen NaN … NaN NaN NaN 4 Adelie Torgersen 36.7 … 193.0 3450.0 Female .. … … … … … … … 339 Gentoo Biscoe NaN … NaN NaN NaN 340 Gentoo Biscoe 46.8 … 215.0 4850.0 Female 341 Gentoo Biscoe 50.4 … 222.0 5750.0 Male 342 Gentoo Biscoe 45.2 … 212.0 5200.0 Female 343 Gentoo Biscoe 49.9 … 213.0 5400.0 Male\n[344 rows x 7 columns]"
+  },
+  {
+    "objectID": "index.html#mathematical-content",
+    "href": "index.html#mathematical-content",
+    "title": "Quarto Presentations",
+    "section": "Mathematical Content",
+    "text": "Mathematical Content\nThe following slides showcase mathematical and LaTeX capabilities"
+  },
+  {
+    "objectID": "index.html#latex-equations",
+    "href": "index.html#latex-equations",
+    "title": "Quarto Presentations",
+    "section": "LaTeX Equations",
+    "text": "LaTeX Equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "index.html#presentation-features",
+    "href": "index.html#presentation-features",
+    "title": "Quarto Presentations",
+    "section": "Presentation Features",
+    "text": "Presentation Features\nThe following slides demonstrate Reveal.js presentation capabilities"
+  },
+  {
+    "objectID": "index.html#incremental-lists",
+    "href": "index.html#incremental-lists",
+    "title": "Quarto Presentations",
+    "section": "Incremental Lists",
+    "text": "Incremental Lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally."
+  },
+  {
+    "objectID": "index.html#fragments",
+    "href": "index.html#fragments",
+    "title": "Quarto Presentations",
+    "section": "Fragments",
+    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red"
+  },
+  {
+    "objectID": "index.html#slide-backgrounds",
+    "href": "index.html#slide-backgrounds",
+    "title": "Quarto Presentations",
+    "section": "Slide Backgrounds",
+    "text": "Slide Backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nDifferent background transitions are available via the background-transition option.\n\nLearn more: Slide Backgrounds"
+  },
+  {
+    "objectID": "index.html#media-backgrounds",
+    "href": "index.html#media-backgrounds",
+    "title": "Quarto Presentations",
+    "section": "Media Backgrounds",
+    "text": "Media Backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe\n\n\nLearn more: Media Backgrounds"
+  },
+  {
+    "objectID": "index.html#absolute-position",
+    "href": "index.html#absolute-position",
+    "title": "Quarto Presentations",
+    "section": "Absolute Position",
+    "text": "Absolute Position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
+  },
+  {
+    "objectID": "index.html#auto-animate",
+    "href": "index.html#auto-animate",
+    "title": "Quarto Presentations",
+    "section": "Auto-Animate",
+    "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
+  },
+  {
+    "objectID": "index.html#auto-animate-1",
+    "href": "index.html#auto-animate-1",
+    "title": "Quarto Presentations",
+    "section": "Auto-Animate",
+    "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
+  },
+  {
+    "objectID": "index.html#slide-transitions",
+    "href": "index.html#slide-transitions",
+    "title": "Quarto Presentations",
+    "section": "Slide Transitions",
+    "text": "Slide Transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen.\n\n\n\n\nLearn more: Slide Transitions"
+  },
+  {
+    "objectID": "index.html#avidya-dukkha1",
+    "href": "index.html#avidya-dukkha1",
+    "title": "Quarto Presentations",
+    "section": "Avidya-Dukkha1",
+    "text": "Avidya-Dukkha1\n\nDataPlot\n\n\n\n\n\n\n\n\n\n\ngender\nage\nstatus\nnegativism\nsomatization\nshyness\npsychopathology\nextraversion\nanxiety\nneuroticism\navidya\n\n\n\n\nMale\n29\nNot Married\n0.68\n0.78\n-0.70\n1.69\n2.00\n1.89\n1.68\nhigh\n\n\nFemale\n40\nMarried\n0.98\n-0.02\n0.84\n0.94\n1.06\n1.95\n2.00\nhigh\n\n\nMale\n46\nMarried\n0.39\n0.19\n0.92\n0.58\n0.18\n1.30\n0.17\nmid\n\n\nMale\n50\nMarried\n0.39\n0.59\n0.04\n0.38\n-1.75\n0.25\n0.65\nhigh\n\n\nFemale\n30\nNot Married\n-1.56\n-1.25\n-0.43\n0.15\n-0.02\n-0.35\n-0.95\nlow\n\n\nFemale\n35\nMarried\n-0.71\n-0.59\n-1.47\n0.58\n0.18\n-0.35\n0.17\nmid\n\n\nFemale\n28\nNot Married\n-0.57\n-0.13\n1.21\n-0.41\n0.61\n0.94\n0.68\nhigh\n\n\nMale\n52\nWidow\n-0.71\n0.39\n1.21\n-0.41\n-1.47\n0.50\n0.33\nlow\n\n\nFemale\n20\nNot Married\n1.28\n0.08\n1.35\n-0.10\n-1.88\n0.25\n1.06\nhigh\n\n\nFemale\n45\nMarried\n1.28\n1.76\n1.48\n1.55\n0.61\n0.25\n-0.51\nhigh\n\n\nMale\n52\nMarried\n-1.56\n-1.40\n-1.04\n-0.10\n0.83\n-0.92\n-0.63\nlow\n\n\nFemale\n20\nNot Married\n1.28\n0.08\n1.21\n1.82\n-0.61\n1.69\n1.78\nhigh\n\n\nFemale\n32\nNot Married\n-0.44\n0.29\n0.14\n0.15\n1.06\n-1.66\n-0.28\nlow\n\n\nFemale\n46\nMarried\n0.39\n-0.13\n-0.18\n-0.41\n-1.31\n-0.18\n-0.30\nlow\n\n\nFemale\n27\nNot Married\n0.39\n0.08\n0.24\n-0.41\n0.61\n-0.18\n-0.63\nlow\n\n\nMale\n40\nNot Married\n-0.31\n-1.75\n0.51\n-0.80\n0.40\n-1.14\n-1.17\nlow\n\n\nFemale\n65\nNot Married\n-0.71\n0.49\n0.84\n-0.41\n-0.61\n1.22\n0.33\nlow\n\n\nFemale\n44\nMarried\n-1.56\n-0.24\n1.21\n0.15\n2.25\n1.22\n0.98\nhigh\n\n\nFemale\n46\nMarried\n0.25\n1.41\n0.24\n0.38\n-1.31\n0.25\n0.15\nhigh\n\n\nFemale\n46\nMarried\n-0.17\n0.49\n0.76\n-1.66\n-1.47\n-0.35\n0.81\nhigh\n\n\nFemale\n23\nNot Married\n0.98\n-0.13\n1.21\n0.15\n0.18\n0.11\n1.50\nhigh\n\n\nMale\n41\nMarried\n-1.33\n-2.29\n-1.47\n-1.66\n-0.97\n-1.96\n-2.23\nlow\n\n\nFemale\n38\nMarried\n-0.83\n-0.97\n-1.47\n-1.66\n-0.80\n-0.53\n-1.03\nlow\n\n\nFemale\n25\nDivorced\n1.28\n1.41\n-0.30\n0.77\n-0.42\n0.25\n0.94\nhigh\n\n\nFemale\n26\nMarried\n-0.44\n-0.02\n0.24\n1.26\n-0.80\n0.84\n0.81\nmid\n\n\nFemale\n45\nMarried\n-1.67\n-0.71\n-1.04\n-0.10\n-0.80\n-0.18\n0.23\nlow\n\n\nFemale\n24\nNot Married\n0.25\n0.78\n-1.47\n-0.10\n-0.97\n0.73\n0.66\nlow\n\n\nMale\n55\nMarried\n0.25\n0.68\n-1.47\n-0.41\n-1.31\n-0.72\n-1.17\nlow\n\n\nMale\n41\nMarried\n-1.89\n-1.75\n-0.18\n-1.66\n-1.62\n-0.35\n-0.44\nlow\n\n\nFemale\n25\nNot Married\n0.53\n0.78\n-0.30\n1.11\n0.18\n0.73\n0.73\nhigh\n\n\nFemale\n30\nMarried\n1.89\n-0.35\n1.35\n2.52\n1.52\n1.46\n1.52\nhigh\n\n\nFemale\n40\nDivorced\n1.28\n-0.24\n-0.30\n-0.41\n0.61\n0.84\n0.66\nhigh\n\n\nFemale\n43\nMarried\n0.83\n0.08\n-0.30\n-0.41\n-1.31\n1.54\n1.24\nhigh\n\n\nMale\n38\nMarried\n-0.71\n-1.11\n-1.79\n-0.10\n1.06\n-0.53\n0.13\nlow\n\n\nMale\n28\nNot Married\n0.39\n0.08\n1.41\n0.38\n-1.62\n0.62\n0.57\nhigh\n\n\nFemale\n51\nMarried\n1.58\n-0.02\n1.21\n0.38\n0.40\n1.03\n0.61\nhigh\n\n\nFemale\n44\nMarried\n-0.44\n-0.35\n-1.04\n0.58\n-0.02\n0.38\n-0.10\nlow\n\n\nFemale\n24\nNot Married\n-1.21\n-0.59\n-1.47\n0.15\n0.40\n-0.53\n-1.33\nlow\n\n\nMale\n51\nMarried\n-0.17\n0.08\n-0.07\n0.38\n1.06\n1.38\n0.96\nhigh\n\n\nMale\n34\nMarried\n1.43\n0.87\n-1.04\n-0.80\n0.83\n-0.18\n-0.82\nlow\n\n\nFemale\n27\nNot Married\n-0.17\n1.59\n0.24\n-0.41\n-0.80\n-0.03\n-0.51\nlow\n\n\nMale\n51\nMarried\n1.28\n0.08\n-0.30\n0.94\n0.61\n0.25\n0.11\nhigh\n\n\nMale\n19\nNot Married\n0.25\n-0.13\n0.24\n-1.66\n0.61\n-0.92\n-0.32\nhigh\n\n\nFemale\n38\nMarried\n2.21\n-0.59\n0.84\n-0.10\n0.61\n-1.14\n-0.32\nhigh\n\n\nFemale\n14\nNot Married\n-1.33\n0.49\n0.42\n1.82\n-0.97\n0.50\n0.23\nhigh\n\n\nMale\n29\nNot Married\n0.39\n0.49\n1.07\n0.15\n-0.22\n-0.03\n0.33\nhigh\n\n\nMale\n52\nDivorced\n0.68\n-0.35\n1.21\n0.77\n-0.22\n-0.35\n0.48\nhigh\n\n\nFemale\n56\nMarried\n-0.17\n0.59\n-0.70\n-0.80\n-1.31\n0.73\n0.54\nlow\n\n\nMale\n50\nMarried\n1.58\n-0.71\n0.76\n0.94\n-0.80\n1.46\n1.36\nhigh\n\n\nFemale\n52\nMarried\n-0.17\n0.87\n-0.18\n0.38\n-0.22\n1.13\n0.68\nlow\n\n\nMale\n24\nNot Married\n-0.03\n-0.71\n-0.18\n-0.41\n1.06\n-0.72\n-0.65\nmid\n\n\nFemale\n40\nMarried\n-0.83\n1.15\n-0.70\n-0.41\n-0.22\n-1.14\n0.13\nlow\n\n\nFemale\n27\nNot Married\n2.05\n1.67\n0.84\n-0.41\n1.06\n1.22\n2.50\nhigh\n\n\nFemale\n42\nDivorced\n-0.44\n-1.75\n0.04\n1.26\n1.52\n-1.96\n-1.92\nlow\n\n\nMale\n47\nWidow\n-2.43\n-2.29\n0.84\n-0.41\n-0.22\n-1.96\n-2.05\nlow\n\n\nFemale\n28\nMarried\n-0.17\n0.49\n-0.18\n-0.41\n1.06\n-0.03\n-0.32\nlow\n\n\nFemale\n41\nMarried\n-0.17\n1.41\n-1.04\n0.15\n0.18\n0.73\n0.82\nlow\n\n\nMale\n57\nMarried\n0.11\n1.15\n1.35\n0.15\n-0.97\n0.25\n-0.21\nhigh\n\n\nMale\n49\nMarried\n-1.89\n-1.75\n-1.23\n-1.66\n0.18\n-1.39\n-2.05\nlow\n\n\nFemale\n27\nNot Married\n-0.17\n-0.84\n0.04\n0.15\n1.52\n-1.14\n-1.51\nlow\n\n\nMale\n39\nMarried\n1.13\n0.68\n0.04\n0.58\n-0.97\n0.25\n-0.63\nhigh\n\n\nFemale\n55\nMarried\n0.11\n0.29\n0.92\n0.58\n-0.42\n-0.72\n0.46\nhigh\n\n\nFemale\n33\nDivorced\n1.28\n2.01\n0.84\n1.55\n-0.61\n1.82\n2.14\nhigh\n\n\nFemale\n26\nNot Married\n0.11\n-0.84\n-0.43\n-0.41\n0.61\n-0.18\n0.05\nmid\n\n\nFemale\n18\nNot Married\n0.68\n1.33\n0.04\n-0.10\n0.83\n-0.53\n-0.06\nmid\n\n\nFemale\n50\nDivorced\n0.39\n1.41\n0.04\n0.58\n0.18\n1.03\n1.04\nhigh\n\n\nMale\n41\nMarried\n0.11\n-0.71\n-0.43\n-1.66\n-0.61\n-0.03\n-1.03\nlow\n\n\nFemale\n34\nMarried\n1.89\n1.92\n-1.47\n0.94\n0.18\n2.13\n2.15\nhigh\n\n\nFemale\n28\nMarried\n0.98\n1.41\n1.07\n1.41\n-0.61\n-0.03\n-0.17\nhigh\n\n\nMale\n17\nNot Married\n-1.44\n-0.59\n-1.47\n-1.66\n1.29\n-1.14\n-1.22\nlow\n\n\nMale\n44\nNot Married\n0.25\n-0.13\n-1.47\n0.58\n-0.22\n-1.14\n-1.22\nlow\n\n\nMale\n17\nNot Married\n-1.44\n-0.59\n-1.47\n-1.66\n1.29\n-1.14\n-1.22\nlow\n\n\nMale\n44\nNot Married\n0.25\n-0.13\n-1.47\n0.58\n-0.22\n-1.14\n-1.22\nlow\n\n\nFemale\n42\nMarried\n0.11\n1.76\n0.84\n-0.41\n-0.61\n1.76\n2.02\nhigh\n\n\nFemale\n35\nMarried\n0.98\n-1.75\n0.76\n0.15\n0.61\n-1.39\n-1.76\nmid\n\n\nFemale\n30\nMarried\n-1.21\n-1.57\n0.51\n0.15\n0.18\n-1.14\n-1.82\nlow\n\n\nFemale\n30\nRe-married\n-0.96\n1.06\n0.99\n0.94\n-1.62\n1.76\n1.40\nhigh\n\n\nFemale\n36\nNot Married\n-0.03\n-0.84\n0.14\n-0.41\n-0.02\n0.11\n0.15\nmid\n\n\nMale\n42\nDivorced\n0.53\n-0.97\n0.04\n-0.10\n1.06\n-1.39\n-0.95\nmid\n\n\nFemale\n21\nNot Married\n0.11\n1.41\n-0.70\n0.58\n-1.31\n0.84\n1.38\nhigh\n\n\nFemale\n27\nNot Married\n-0.03\n-1.75\n-0.86\n-0.41\n1.29\n-1.14\n-1.17\nlow\n\n\nFemale\n49\nMarried\n0.68\n1.24\n1.35\n0.94\n-0.42\n0.25\n1.40\nhigh\n\n\nFemale\n31\nMarried\n0.83\n-0.47\n0.04\n-1.66\n-0.02\n-1.96\n-1.36\nlow\n\n\nFemale\n51\nWidow\n-0.57\n-0.02\n-1.47\n-0.80\n1.76\n-0.18\n0.05\nlow\n\n\nFemale\n33\nMarried\n-1.33\n-0.24\n-1.23\n-1.66\n-0.02\n1.22\n0.31\nlow\n\n\nFemale\n37\nMarried\n0.25\n0.08\n1.14\n-1.66\n-0.61\n-0.92\n-0.08\nlow\n\n\nFemale\n36\nMarried\n0.98\n-0.47\n0.76\n-1.66\n-1.62\n-0.53\n0.54\nhigh\n\n\nMale\n61\nRe-married\n-1.21\n-1.25\n-1.23\n-1.66\n0.61\n-1.39\n-1.08\nlow\n\n\nMale\n50\nMarried\n-0.71\n-0.59\n-1.23\n-1.66\n1.52\n0.38\n-0.51\nlow\n\n\nFemale\n42\nMarried\n-0.44\n-1.11\n0.60\n-1.66\n-0.22\n-1.39\n-1.42\nlow\n\n\nMale\n38\nDivorced\n-0.44\n-0.35\n0.92\n1.55\n0.61\n0.94\n0.86\nhigh\n\n\nMale\n41\nMarried\n-0.17\n0.08\n-1.04\n-0.41\n0.18\n-0.18\n0.11\nlow\n\n\nFemale\n28\nNot Married\n1.58\n1.50\n1.35\n0.94\n0.40\n1.30\n1.03\nhigh\n\n\nFemale\n42\nMarried\n0.68\n1.92\n1.35\n1.11\n-1.47\n1.46\n1.21\nhigh\n\n\nFemale\n45\nMarried\n0.39\n0.29\n-0.70\n0.15\n-0.42\n0.50\n0.70\nlow\n\n\nFemale\n30\nNot Married\n1.43\n1.76\n1.41\n2.18\n0.18\n1.76\n1.85\nhigh\n\n\nFemale\n38\nDivorced\n-0.03\n-1.40\n-2.51\n0.15\n1.06\n0.38\n0.15\nmid\n\n\nMale\n42\nDivorced\n1.28\n2.01\n-1.23\n0.15\n1.29\n0.62\n0.72\nhigh\n\n\nMale\n39\nNot Married\n1.13\n0.49\n-0.56\n0.38\n-0.02\n0.25\n0.25\nhigh\n\n\nFemale\n22\nNot Married\n-0.96\n-0.84\n-0.70\n-1.66\n-0.22\n-0.53\n-0.72\nlow\n\n\nMale\n35\nNot Married\n-1.44\n-1.40\n1.21\n-1.66\n-0.42\n-1.39\n-1.19\nlow\n\n\nFemale\n25\nNot Married\n0.39\n0.49\n-2.51\n0.15\n2.50\n0.38\n-0.32\nlow\n\n\nMale\n53\nMarried\n-0.17\n-0.13\n-0.70\n-0.10\n-0.97\n-1.14\n0.11\nhigh\n\n\nMale\n41\nMarried\n-0.57\n-1.75\n-0.43\n-0.10\n0.83\n-1.66\n-1.57\nlow\n\n\nMale\n53\nNot Married\n-0.17\n1.33\n-0.07\n0.38\n-0.22\n-0.18\n-0.60\nmid\n\n\nMale\n26\nNot Married\n-0.44\n0.68\n-0.56\n-0.10\n-1.31\n-0.35\n-0.39\nlow\n\n\nMale\n35\nMarried\n0.68\n1.41\n0.24\n0.15\n-0.97\n0.84\n1.17\nhigh\n\n\nFemale\n35\nMarried\n-0.71\n0.08\n1.35\n-1.66\n-0.61\n-1.14\n-0.77\nlow\n\n\nFemale\n34\nDivorced\n1.13\n-0.97\n0.99\n0.58\n0.40\n-0.72\n-0.06\nhigh\n\n\nMale\n40\nMarried\n-1.56\n-2.29\n-0.18\n-0.80\n1.29\n-1.66\n-1.66\nlow\n\n\nMale\n49\nMarried\n-0.96\n-0.71\n0.14\n-0.41\n-0.61\n-1.39\n-0.98\nlow\n\n\nMale\n41\nMarried\n2.05\n0.96\n0.68\n1.82\n-0.80\n0.94\n1.22\nhigh\n\n\nMale\n51\nRe-married\n-0.57\n-2.29\n-0.70\n-1.66\n-0.02\n-0.18\n-0.15\nlow\n\n\nMale\n40\nDivorced\n-0.96\n0.87\n1.21\n0.15\n0.18\n-0.72\n-0.80\nlow\n\n\nMale\n42\nMarried\n0.39\n-0.84\n-0.30\n0.94\n0.40\n0.50\n0.33\nhigh\n\n\nMale\n31\nMarried\n1.43\n-0.02\n0.99\n1.26\n0.83\n-0.72\n-0.12\nhigh\n\n\nMale\n22\nNot Married\n-0.31\n-0.24\n-0.07\n0.15\n-0.02\n1.22\n0.00\nmid\n\n\nMale\n36\nNot Married\n-1.44\n0.49\n0.76\n-0.41\n-0.97\n-0.35\n-0.46\nlow\n\n\nFemale\n24\nMarried\n-1.67\n-0.84\n-1.47\n-1.66\n0.18\n-0.92\n-1.48\nlow\n\n\nFemale\n33\nDivorced\n0.11\n-1.40\n-0.30\n0.15\n0.61\n-0.35\n0.09\nmid\n\n\nMale\n41\nMarried\n-1.89\n-1.40\n-1.79\n-0.41\n0.83\n-1.39\n-1.57\nlow\n\n\nMale\n53\nMarried\n-0.17\n0.08\n-1.23\n-0.41\n0.18\n-0.53\n-0.34\nlow\n\n\nMale\n35\nMarried\n0.83\n0.08\n-1.04\n-0.41\n1.06\n-0.35\n0.15\nmid\n\n\nMale\n24\nNot Married\n-1.89\n-1.40\n0.42\n-0.41\n0.61\n-1.14\n-1.60\nlow\n\n\nFemale\n27\nMarried\n-1.89\n-0.59\n-1.79\n-0.41\n0.83\n-0.35\n-0.90\nlow\n\n\nFemale\n17\nNot Married\n-0.83\n-0.47\n-1.47\n-1.66\n1.52\n-0.72\n-1.11\nlow\n\n\nFemale\n19\nNot Married\n0.83\n-0.13\n0.14\n-0.10\n-0.80\n-1.14\n-0.25\nhigh\n\n\nMale\n40\nNot Married\n0.39\n1.06\n1.14\n0.94\n0.40\n-1.66\n-0.77\nhigh\n\n\nMale\n48\nMarried\n-0.83\n0.78\n-1.47\n-0.10\n0.61\n-0.18\n-0.55\nlow\n\n\nFemale\n33\nMarried\n-1.44\n-0.59\n1.48\n-0.80\n-1.88\n-0.72\n-0.70\nlow\n\n\nFemale\n22\nMarried\n1.28\n0.08\n1.35\n1.11\n-1.62\n1.13\n1.50\nhigh\n\n\nMale\n48\nMarried\n-0.03\n-0.02\n0.76\n0.15\n-1.62\n0.38\n0.48\nhigh\n\n\nFemale\n47\nMarried\n-0.17\n-0.35\n0.60\n-0.80\n-1.15\n0.62\n0.00\nlow\n\n\nFemale\n58\nMarried\n1.89\n1.41\n1.21\n1.26\n2.25\n-0.35\n-0.06\nhigh\n\n\nMale\n36\nNot Married\n-0.03\n-0.02\n-0.70\n-0.41\n-0.61\n1.38\n-0.02\nlow\n\n\nFemale\n49\nRe-married\n1.43\n1.76\n-0.56\n1.69\n-0.22\n1.03\n1.25\nhigh\n\n\nMale\n37\nNot Married\n0.11\n0.19\n0.60\n-0.41\n-0.22\n0.38\n0.25\nhigh\n\n\nFemale\n34\nMarried\n0.11\n0.87\n-0.18\n-1.66\n1.52\n0.11\n0.35\nmid\n\n\nMale\n60\nRe-married\n-1.09\n0.39\n0.60\n0.58\n-1.75\n0.94\n0.35\nhigh\n\n\nMale\n50\nNot Married\n0.25\n0.08\n1.14\n-0.41\n-0.22\n0.73\n0.44\nlow\n\n\nMale\n30\nNot Married\n1.89\n0.29\n-1.04\n1.82\n1.52\n1.13\n0.81\nhigh\n\n\nMale\n67\nMarried\n-1.44\n0.49\n-1.47\n-0.41\n-0.97\n1.03\n0.48\nlow\n\n\nFemale\n36\nMarried\n-1.44\n1.76\n-1.79\n-1.66\n-0.42\n-0.03\n-1.08\nlow\n\n\nFemale\n32\nMarried\n-0.57\n0.19\n0.84\n-0.80\n0.83\n-1.39\n-0.70\nlow\n\n\nMale\n28\nMarried\n0.39\n-0.59\n1.07\n-1.66\n1.06\n0.25\n-0.55\nmid\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheoretical background: Website"
+  },
+  {
+    "objectID": "index.html#avidya-dukkha2",
+    "href": "index.html#avidya-dukkha2",
+    "title": "Quarto Presentations",
+    "section": "Avidya-Dukkha2",
+    "text": "Avidya-Dukkha2\n\nDataPlot\n\n\n\n\n\n\n\n\n\n\ngender\nage\nstatus\nnegativism\nsomatization\nshyness\npsychopathology\nextraversion\nanxiety\nneuroticism\navidya\n\n\n\n\nMale\n29\nNot Married\n0.68\n0.78\n-0.70\n1.69\n2.00\n1.89\n1.68\nhigh\n\n\nFemale\n40\nMarried\n0.98\n-0.02\n0.84\n0.94\n1.06\n1.95\n2.00\nhigh\n\n\nMale\n46\nMarried\n0.39\n0.19\n0.92\n0.58\n0.18\n1.30\n0.17\nmid\n\n\nMale\n50\nMarried\n0.39\n0.59\n0.04\n0.38\n-1.75\n0.25\n0.65\nhigh\n\n\nFemale\n30\nNot Married\n-1.56\n-1.25\n-0.43\n0.15\n-0.02\n-0.35\n-0.95\nlow\n\n\nFemale\n35\nMarried\n-0.71\n-0.59\n-1.47\n0.58\n0.18\n-0.35\n0.17\nmid\n\n\nFemale\n28\nNot Married\n-0.57\n-0.13\n1.21\n-0.41\n0.61\n0.94\n0.68\nhigh\n\n\nMale\n52\nWidow\n-0.71\n0.39\n1.21\n-0.41\n-1.47\n0.50\n0.33\nlow\n\n\nFemale\n20\nNot Married\n1.28\n0.08\n1.35\n-0.10\n-1.88\n0.25\n1.06\nhigh\n\n\nFemale\n45\nMarried\n1.28\n1.76\n1.48\n1.55\n0.61\n0.25\n-0.51\nhigh\n\n\nMale\n52\nMarried\n-1.56\n-1.40\n-1.04\n-0.10\n0.83\n-0.92\n-0.63\nlow\n\n\nFemale\n20\nNot Married\n1.28\n0.08\n1.21\n1.82\n-0.61\n1.69\n1.78\nhigh\n\n\nFemale\n32\nNot Married\n-0.44\n0.29\n0.14\n0.15\n1.06\n-1.66\n-0.28\nlow\n\n\nFemale\n46\nMarried\n0.39\n-0.13\n-0.18\n-0.41\n-1.31\n-0.18\n-0.30\nlow\n\n\nFemale\n27\nNot Married\n0.39\n0.08\n0.24\n-0.41\n0.61\n-0.18\n-0.63\nlow\n\n\nMale\n40\nNot Married\n-0.31\n-1.75\n0.51\n-0.80\n0.40\n-1.14\n-1.17\nlow\n\n\nFemale\n65\nNot Married\n-0.71\n0.49\n0.84\n-0.41\n-0.61\n1.22\n0.33\nlow\n\n\nFemale\n44\nMarried\n-1.56\n-0.24\n1.21\n0.15\n2.25\n1.22\n0.98\nhigh\n\n\nFemale\n46\nMarried\n0.25\n1.41\n0.24\n0.38\n-1.31\n0.25\n0.15\nhigh\n\n\nFemale\n46\nMarried\n-0.17\n0.49\n0.76\n-1.66\n-1.47\n-0.35\n0.81\nhigh\n\n\nFemale\n23\nNot Married\n0.98\n-0.13\n1.21\n0.15\n0.18\n0.11\n1.50\nhigh\n\n\nMale\n41\nMarried\n-1.33\n-2.29\n-1.47\n-1.66\n-0.97\n-1.96\n-2.23\nlow\n\n\nFemale\n38\nMarried\n-0.83\n-0.97\n-1.47\n-1.66\n-0.80\n-0.53\n-1.03\nlow\n\n\nFemale\n25\nDivorced\n1.28\n1.41\n-0.30\n0.77\n-0.42\n0.25\n0.94\nhigh\n\n\nFemale\n26\nMarried\n-0.44\n-0.02\n0.24\n1.26\n-0.80\n0.84\n0.81\nmid\n\n\nFemale\n45\nMarried\n-1.67\n-0.71\n-1.04\n-0.10\n-0.80\n-0.18\n0.23\nlow\n\n\nFemale\n24\nNot Married\n0.25\n0.78\n-1.47\n-0.10\n-0.97\n0.73\n0.66\nlow\n\n\nMale\n55\nMarried\n0.25\n0.68\n-1.47\n-0.41\n-1.31\n-0.72\n-1.17\nlow\n\n\nMale\n41\nMarried\n-1.89\n-1.75\n-0.18\n-1.66\n-1.62\n-0.35\n-0.44\nlow\n\n\nFemale\n25\nNot Married\n0.53\n0.78\n-0.30\n1.11\n0.18\n0.73\n0.73\nhigh\n\n\nFemale\n30\nMarried\n1.89\n-0.35\n1.35\n2.52\n1.52\n1.46\n1.52\nhigh\n\n\nFemale\n40\nDivorced\n1.28\n-0.24\n-0.30\n-0.41\n0.61\n0.84\n0.66\nhigh\n\n\nFemale\n43\nMarried\n0.83\n0.08\n-0.30\n-0.41\n-1.31\n1.54\n1.24\nhigh\n\n\nMale\n38\nMarried\n-0.71\n-1.11\n-1.79\n-0.10\n1.06\n-0.53\n0.13\nlow\n\n\nMale\n28\nNot Married\n0.39\n0.08\n1.41\n0.38\n-1.62\n0.62\n0.57\nhigh\n\n\nFemale\n51\nMarried\n1.58\n-0.02\n1.21\n0.38\n0.40\n1.03\n0.61\nhigh\n\n\nFemale\n44\nMarried\n-0.44\n-0.35\n-1.04\n0.58\n-0.02\n0.38\n-0.10\nlow\n\n\nFemale\n24\nNot Married\n-1.21\n-0.59\n-1.47\n0.15\n0.40\n-0.53\n-1.33\nlow\n\n\nMale\n51\nMarried\n-0.17\n0.08\n-0.07\n0.38\n1.06\n1.38\n0.96\nhigh\n\n\nMale\n34\nMarried\n1.43\n0.87\n-1.04\n-0.80\n0.83\n-0.18\n-0.82\nlow\n\n\nFemale\n27\nNot Married\n-0.17\n1.59\n0.24\n-0.41\n-0.80\n-0.03\n-0.51\nlow\n\n\nMale\n51\nMarried\n1.28\n0.08\n-0.30\n0.94\n0.61\n0.25\n0.11\nhigh\n\n\nMale\n19\nNot Married\n0.25\n-0.13\n0.24\n-1.66\n0.61\n-0.92\n-0.32\nhigh\n\n\nFemale\n38\nMarried\n2.21\n-0.59\n0.84\n-0.10\n0.61\n-1.14\n-0.32\nhigh\n\n\nFemale\n14\nNot Married\n-1.33\n0.49\n0.42\n1.82\n-0.97\n0.50\n0.23\nhigh\n\n\nMale\n29\nNot Married\n0.39\n0.49\n1.07\n0.15\n-0.22\n-0.03\n0.33\nhigh\n\n\nMale\n52\nDivorced\n0.68\n-0.35\n1.21\n0.77\n-0.22\n-0.35\n0.48\nhigh\n\n\nFemale\n56\nMarried\n-0.17\n0.59\n-0.70\n-0.80\n-1.31\n0.73\n0.54\nlow\n\n\nMale\n50\nMarried\n1.58\n-0.71\n0.76\n0.94\n-0.80\n1.46\n1.36\nhigh\n\n\nFemale\n52\nMarried\n-0.17\n0.87\n-0.18\n0.38\n-0.22\n1.13\n0.68\nlow\n\n\nMale\n24\nNot Married\n-0.03\n-0.71\n-0.18\n-0.41\n1.06\n-0.72\n-0.65\nmid\n\n\nFemale\n40\nMarried\n-0.83\n1.15\n-0.70\n-0.41\n-0.22\n-1.14\n0.13\nlow\n\n\nFemale\n27\nNot Married\n2.05\n1.67\n0.84\n-0.41\n1.06\n1.22\n2.50\nhigh\n\n\nFemale\n42\nDivorced\n-0.44\n-1.75\n0.04\n1.26\n1.52\n-1.96\n-1.92\nlow\n\n\nMale\n47\nWidow\n-2.43\n-2.29\n0.84\n-0.41\n-0.22\n-1.96\n-2.05\nlow\n\n\nFemale\n28\nMarried\n-0.17\n0.49\n-0.18\n-0.41\n1.06\n-0.03\n-0.32\nlow\n\n\nFemale\n41\nMarried\n-0.17\n1.41\n-1.04\n0.15\n0.18\n0.73\n0.82\nlow\n\n\nMale\n57\nMarried\n0.11\n1.15\n1.35\n0.15\n-0.97\n0.25\n-0.21\nhigh\n\n\nMale\n49\nMarried\n-1.89\n-1.75\n-1.23\n-1.66\n0.18\n-1.39\n-2.05\nlow\n\n\nFemale\n27\nNot Married\n-0.17\n-0.84\n0.04\n0.15\n1.52\n-1.14\n-1.51\nlow\n\n\nMale\n39\nMarried\n1.13\n0.68\n0.04\n0.58\n-0.97\n0.25\n-0.63\nhigh\n\n\nFemale\n55\nMarried\n0.11\n0.29\n0.92\n0.58\n-0.42\n-0.72\n0.46\nhigh\n\n\nFemale\n33\nDivorced\n1.28\n2.01\n0.84\n1.55\n-0.61\n1.82\n2.14\nhigh\n\n\nFemale\n26\nNot Married\n0.11\n-0.84\n-0.43\n-0.41\n0.61\n-0.18\n0.05\nmid\n\n\nFemale\n18\nNot Married\n0.68\n1.33\n0.04\n-0.10\n0.83\n-0.53\n-0.06\nmid\n\n\nFemale\n50\nDivorced\n0.39\n1.41\n0.04\n0.58\n0.18\n1.03\n1.04\nhigh\n\n\nMale\n41\nMarried\n0.11\n-0.71\n-0.43\n-1.66\n-0.61\n-0.03\n-1.03\nlow\n\n\nFemale\n34\nMarried\n1.89\n1.92\n-1.47\n0.94\n0.18\n2.13\n2.15\nhigh\n\n\nFemale\n28\nMarried\n0.98\n1.41\n1.07\n1.41\n-0.61\n-0.03\n-0.17\nhigh\n\n\nMale\n17\nNot Married\n-1.44\n-0.59\n-1.47\n-1.66\n1.29\n-1.14\n-1.22\nlow\n\n\nMale\n44\nNot Married\n0.25\n-0.13\n-1.47\n0.58\n-0.22\n-1.14\n-1.22\nlow\n\n\nMale\n17\nNot Married\n-1.44\n-0.59\n-1.47\n-1.66\n1.29\n-1.14\n-1.22\nlow\n\n\nMale\n44\nNot Married\n0.25\n-0.13\n-1.47\n0.58\n-0.22\n-1.14\n-1.22\nlow\n\n\nFemale\n42\nMarried\n0.11\n1.76\n0.84\n-0.41\n-0.61\n1.76\n2.02\nhigh\n\n\nFemale\n35\nMarried\n0.98\n-1.75\n0.76\n0.15\n0.61\n-1.39\n-1.76\nmid\n\n\nFemale\n30\nMarried\n-1.21\n-1.57\n0.51\n0.15\n0.18\n-1.14\n-1.82\nlow\n\n\nFemale\n30\nRe-married\n-0.96\n1.06\n0.99\n0.94\n-1.62\n1.76\n1.40\nhigh\n\n\nFemale\n36\nNot Married\n-0.03\n-0.84\n0.14\n-0.41\n-0.02\n0.11\n0.15\nmid\n\n\nMale\n42\nDivorced\n0.53\n-0.97\n0.04\n-0.10\n1.06\n-1.39\n-0.95\nmid\n\n\nFemale\n21\nNot Married\n0.11\n1.41\n-0.70\n0.58\n-1.31\n0.84\n1.38\nhigh\n\n\nFemale\n27\nNot Married\n-0.03\n-1.75\n-0.86\n-0.41\n1.29\n-1.14\n-1.17\nlow\n\n\nFemale\n49\nMarried\n0.68\n1.24\n1.35\n0.94\n-0.42\n0.25\n1.40\nhigh\n\n\nFemale\n31\nMarried\n0.83\n-0.47\n0.04\n-1.66\n-0.02\n-1.96\n-1.36\nlow\n\n\nFemale\n51\nWidow\n-0.57\n-0.02\n-1.47\n-0.80\n1.76\n-0.18\n0.05\nlow\n\n\nFemale\n33\nMarried\n-1.33\n-0.24\n-1.23\n-1.66\n-0.02\n1.22\n0.31\nlow\n\n\nFemale\n37\nMarried\n0.25\n0.08\n1.14\n-1.66\n-0.61\n-0.92\n-0.08\nlow\n\n\nFemale\n36\nMarried\n0.98\n-0.47\n0.76\n-1.66\n-1.62\n-0.53\n0.54\nhigh\n\n\nMale\n61\nRe-married\n-1.21\n-1.25\n-1.23\n-1.66\n0.61\n-1.39\n-1.08\nlow\n\n\nMale\n50\nMarried\n-0.71\n-0.59\n-1.23\n-1.66\n1.52\n0.38\n-0.51\nlow\n\n\nFemale\n42\nMarried\n-0.44\n-1.11\n0.60\n-1.66\n-0.22\n-1.39\n-1.42\nlow\n\n\nMale\n38\nDivorced\n-0.44\n-0.35\n0.92\n1.55\n0.61\n0.94\n0.86\nhigh\n\n\nMale\n41\nMarried\n-0.17\n0.08\n-1.04\n-0.41\n0.18\n-0.18\n0.11\nlow\n\n\nFemale\n28\nNot Married\n1.58\n1.50\n1.35\n0.94\n0.40\n1.30\n1.03\nhigh\n\n\nFemale\n42\nMarried\n0.68\n1.92\n1.35\n1.11\n-1.47\n1.46\n1.21\nhigh\n\n\nFemale\n45\nMarried\n0.39\n0.29\n-0.70\n0.15\n-0.42\n0.50\n0.70\nlow\n\n\nFemale\n30\nNot Married\n1.43\n1.76\n1.41\n2.18\n0.18\n1.76\n1.85\nhigh\n\n\nFemale\n38\nDivorced\n-0.03\n-1.40\n-2.51\n0.15\n1.06\n0.38\n0.15\nmid\n\n\nMale\n42\nDivorced\n1.28\n2.01\n-1.23\n0.15\n1.29\n0.62\n0.72\nhigh\n\n\nMale\n39\nNot Married\n1.13\n0.49\n-0.56\n0.38\n-0.02\n0.25\n0.25\nhigh\n\n\nFemale\n22\nNot Married\n-0.96\n-0.84\n-0.70\n-1.66\n-0.22\n-0.53\n-0.72\nlow\n\n\nMale\n35\nNot Married\n-1.44\n-1.40\n1.21\n-1.66\n-0.42\n-1.39\n-1.19\nlow\n\n\nFemale\n25\nNot Married\n0.39\n0.49\n-2.51\n0.15\n2.50\n0.38\n-0.32\nlow\n\n\nMale\n53\nMarried\n-0.17\n-0.13\n-0.70\n-0.10\n-0.97\n-1.14\n0.11\nhigh\n\n\nMale\n41\nMarried\n-0.57\n-1.75\n-0.43\n-0.10\n0.83\n-1.66\n-1.57\nlow\n\n\nMale\n53\nNot Married\n-0.17\n1.33\n-0.07\n0.38\n-0.22\n-0.18\n-0.60\nmid\n\n\nMale\n26\nNot Married\n-0.44\n0.68\n-0.56\n-0.10\n-1.31\n-0.35\n-0.39\nlow\n\n\nMale\n35\nMarried\n0.68\n1.41\n0.24\n0.15\n-0.97\n0.84\n1.17\nhigh\n\n\nFemale\n35\nMarried\n-0.71\n0.08\n1.35\n-1.66\n-0.61\n-1.14\n-0.77\nlow\n\n\nFemale\n34\nDivorced\n1.13\n-0.97\n0.99\n0.58\n0.40\n-0.72\n-0.06\nhigh\n\n\nMale\n40\nMarried\n-1.56\n-2.29\n-0.18\n-0.80\n1.29\n-1.66\n-1.66\nlow\n\n\nMale\n49\nMarried\n-0.96\n-0.71\n0.14\n-0.41\n-0.61\n-1.39\n-0.98\nlow\n\n\nMale\n41\nMarried\n2.05\n0.96\n0.68\n1.82\n-0.80\n0.94\n1.22\nhigh\n\n\nMale\n51\nRe-married\n-0.57\n-2.29\n-0.70\n-1.66\n-0.02\n-0.18\n-0.15\nlow\n\n\nMale\n40\nDivorced\n-0.96\n0.87\n1.21\n0.15\n0.18\n-0.72\n-0.80\nlow\n\n\nMale\n42\nMarried\n0.39\n-0.84\n-0.30\n0.94\n0.40\n0.50\n0.33\nhigh\n\n\nMale\n31\nMarried\n1.43\n-0.02\n0.99\n1.26\n0.83\n-0.72\n-0.12\nhigh\n\n\nMale\n22\nNot Married\n-0.31\n-0.24\n-0.07\n0.15\n-0.02\n1.22\n0.00\nmid\n\n\nMale\n36\nNot Married\n-1.44\n0.49\n0.76\n-0.41\n-0.97\n-0.35\n-0.46\nlow\n\n\nFemale\n24\nMarried\n-1.67\n-0.84\n-1.47\n-1.66\n0.18\n-0.92\n-1.48\nlow\n\n\nFemale\n33\nDivorced\n0.11\n-1.40\n-0.30\n0.15\n0.61\n-0.35\n0.09\nmid\n\n\nMale\n41\nMarried\n-1.89\n-1.40\n-1.79\n-0.41\n0.83\n-1.39\n-1.57\nlow\n\n\nMale\n53\nMarried\n-0.17\n0.08\n-1.23\n-0.41\n0.18\n-0.53\n-0.34\nlow\n\n\nMale\n35\nMarried\n0.83\n0.08\n-1.04\n-0.41\n1.06\n-0.35\n0.15\nmid\n\n\nMale\n24\nNot Married\n-1.89\n-1.40\n0.42\n-0.41\n0.61\n-1.14\n-1.60\nlow\n\n\nFemale\n27\nMarried\n-1.89\n-0.59\n-1.79\n-0.41\n0.83\n-0.35\n-0.90\nlow\n\n\nFemale\n17\nNot Married\n-0.83\n-0.47\n-1.47\n-1.66\n1.52\n-0.72\n-1.11\nlow\n\n\nFemale\n19\nNot Married\n0.83\n-0.13\n0.14\n-0.10\n-0.80\n-1.14\n-0.25\nhigh\n\n\nMale\n40\nNot Married\n0.39\n1.06\n1.14\n0.94\n0.40\n-1.66\n-0.77\nhigh\n\n\nMale\n48\nMarried\n-0.83\n0.78\n-1.47\n-0.10\n0.61\n-0.18\n-0.55\nlow\n\n\nFemale\n33\nMarried\n-1.44\n-0.59\n1.48\n-0.80\n-1.88\n-0.72\n-0.70\nlow\n\n\nFemale\n22\nMarried\n1.28\n0.08\n1.35\n1.11\n-1.62\n1.13\n1.50\nhigh\n\n\nMale\n48\nMarried\n-0.03\n-0.02\n0.76\n0.15\n-1.62\n0.38\n0.48\nhigh\n\n\nFemale\n47\nMarried\n-0.17\n-0.35\n0.60\n-0.80\n-1.15\n0.62\n0.00\nlow\n\n\nFemale\n58\nMarried\n1.89\n1.41\n1.21\n1.26\n2.25\n-0.35\n-0.06\nhigh\n\n\nMale\n36\nNot Married\n-0.03\n-0.02\n-0.70\n-0.41\n-0.61\n1.38\n-0.02\nlow\n\n\nFemale\n49\nRe-married\n1.43\n1.76\n-0.56\n1.69\n-0.22\n1.03\n1.25\nhigh\n\n\nMale\n37\nNot Married\n0.11\n0.19\n0.60\n-0.41\n-0.22\n0.38\n0.25\nhigh\n\n\nFemale\n34\nMarried\n0.11\n0.87\n-0.18\n-1.66\n1.52\n0.11\n0.35\nmid\n\n\nMale\n60\nRe-married\n-1.09\n0.39\n0.60\n0.58\n-1.75\n0.94\n0.35\nhigh\n\n\nMale\n50\nNot Married\n0.25\n0.08\n1.14\n-0.41\n-0.22\n0.73\n0.44\nlow\n\n\nMale\n30\nNot Married\n1.89\n0.29\n-1.04\n1.82\n1.52\n1.13\n0.81\nhigh\n\n\nMale\n67\nMarried\n-1.44\n0.49\n-1.47\n-0.41\n-0.97\n1.03\n0.48\nlow\n\n\nFemale\n36\nMarried\n-1.44\n1.76\n-1.79\n-1.66\n-0.42\n-0.03\n-1.08\nlow\n\n\nFemale\n32\nMarried\n-0.57\n0.19\n0.84\n-0.80\n0.83\n-1.39\n-0.70\nlow\n\n\nMale\n28\nMarried\n0.39\n-0.59\n1.07\n-1.66\n1.06\n0.25\n-0.55\nmid\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheoretical background: Website"
+  },
+  {
+    "objectID": "index.html#interactive-slides",
+    "href": "index.html#interactive-slides",
+    "title": "Quarto Presentations",
+    "section": "Interactive Slides",
+    "text": "Interactive Slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n&lt;folium.map.Marker object at 0x000002E1A9493EB0&gt;\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
+  },
+  {
+    "objectID": "index.html#interactive-slides-1",
+    "href": "index.html#interactive-slides-1",
+    "title": "Quarto Presentations",
+    "section": "Interactive Slides",
+    "text": "Interactive Slides\nTest Test"
+  },
+  {
+    "objectID": "index.html#interactive-slides-2",
+    "href": "index.html#interactive-slides-2",
+    "title": "Quarto Presentations",
+    "section": "Interactive Slides",
+    "text": "Interactive Slides\nTest Test"
+  },
+  {
+    "objectID": "index.html#another-one",
+    "href": "index.html#another-one",
+    "title": "Quarto Presentations",
+    "section": "Another one",
+    "text": "Another one\nSome different text here"
+  },
+  {
+    "objectID": "index.html#interactive-slides-3",
+    "href": "index.html#interactive-slides-3",
+    "title": "Quarto Presentations",
+    "section": "Interactive Slides",
+    "text": "Interactive Slides\nOne more slide transition x_x"
+  },
+  {
+    "objectID": "index.html#point-of-view",
+    "href": "index.html#point-of-view",
+    "title": "Quarto Presentations",
+    "section": "Point of View",
+    "text": "Point of View\npress oo to toggle overview mode:\n\nHold down the AltAlt and click on any element to zoom towards it—try it now on this slide."
+  },
+  {
+    "objectID": "index.html#scroll-view",
+    "href": "index.html#scroll-view",
+    "title": "Quarto Presentations",
+    "section": "Scroll View",
+    "text": "Scroll View\nPress rr (or use the tools in presentation menu ) to open scroll view\nTry it now on this slide — You’ll see a scroll bar on the right and you can scroll down the presentation using your mouse.\nScroll view behavior can be configured using scroll-view configuration."
+  },
+  {
+    "objectID": "index.html#preview-links",
+    "href": "index.html#preview-links",
+    "title": "Quarto Presentations",
+    "section": "Preview Links",
+    "text": "Preview Links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nPython Documentation"
+  },
+  {
+    "objectID": "index.html#interactive-features",
+    "href": "index.html#interactive-features",
+    "title": "Quarto Presentations",
+    "section": "Interactive Features",
+    "text": "Interactive Features\nKey features for presenting:\n\nPress mm to toggle the slide menu\nPress oo to toggle overview mode\nPress ss to view speaker notes\nPress gg to goto a slide\nPress bb for black screen\nPress cc to toggle chalkboard"
+  },
+  {
+    "objectID": "index.html#chalkboard",
+    "href": "index.html#chalkboard",
+    "title": "Quarto Presentations",
+    "section": "Chalkboard",
+    "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide."
+  },
+  {
+    "objectID": "index.html#and-more",
+    "href": "index.html#and-more",
+    "title": "Quarto Presentations",
+    "section": "And More…",
+    "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically)\nMultiplex (allow audience to follow along on their devices)\n\n\nLearn more: Quarto Presentations"
+  }
+]
