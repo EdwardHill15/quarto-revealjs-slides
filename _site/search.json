@@ -60,7 +60,7 @@
     "href": "index.html#interactive-plotting-with-plotly",
     "title": "Quarto Presentations",
     "section": "Interactive Plotting with Plotly",
-    "text": "Interactive Plotting with Plotly\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\n# Load the dataset\ndf = px.data.gapminder().query(\"year == 2007\")\n\n# Create an interactive scatter plot\nfig = px.scatter(df, x=\"gdpPercap\", y=\"lifeExp\", \n                 size=\"pop\", color=\"continent\",\n                 hover_name=\"country\", log_x=True,\n                 size_max=60)\nfig"
+    "text": "Interactive Plotting with Plotly\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\ndf = pd.read_csv(\"avidya_dukkha.csv\")\n\nfig = px.scatter(\n    df,\n    x=\"psychopathology\",\n    y=\"neuroticism\",\n    color=\"avidya\",\n    hover_name=\"psychopathology\",\n    size_max=80,\n    width=1000,\n    height=600\n)\n\nfig.update_layout(\n    margin=dict(l=40, r=40, t=40, b=40)\n)"
   },
   {
     "objectID": "index.html#advanced-matplotlib-visualization",
@@ -214,7 +214,7 @@
     "href": "index.html#interactive-slides",
     "title": "Quarto Presentations",
     "section": "Interactive Slides",
-    "text": "Interactive Slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n&lt;folium.map.Marker object at 0x000002E1A9493EB0&gt;\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
+    "text": "Interactive Slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n&lt;folium.map.Marker object at 0x00000225895F8FD0&gt;\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
   },
   {
     "objectID": "index.html#interactive-slides-1",
@@ -285,5 +285,12 @@
     "title": "Quarto Presentations",
     "section": "And More…",
     "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically)\nMultiplex (allow audience to follow along on their devices)\n\n\nLearn more: Quarto Presentations"
+  },
+  {
+    "objectID": "index.html#interactive-plotting-with-plotly-output",
+    "href": "index.html#interactive-plotting-with-plotly-output",
+    "title": "Quarto Presentations",
+    "section": "Interactive Plotting with Plotly",
+    "text": "Interactive Plotting with Plotly\n\n                        \n                                            \n\n\nCode\nfig.show()"
   }
 ]
